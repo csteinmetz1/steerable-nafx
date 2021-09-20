@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Generating new audio effects with randomly weighted neural networks">
+  <meta name="keywords" content="neural networks, plugin, VST, distortion, overdrive">
+  <meta name="author" content="Christian Steinmetz">
+
+  <title>Steerable discovery of neural audio effects</title>
+  <!-- Bootstrap core CSS -->
+  <!--link href="bootstrap.min.css" rel="stylesheet"-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <div class="text-center">
+    <div class="container"></div>
+    <h1 class="pt-5">Steerable discovery of neural audio effects</h1>
+    <p style="font-size: 1.3em; margin-bottom: 0;">
+      <a href="http://www.christiansteinmetz.com"> Christian J. Steinmetz</a> and
+      <a href="http://www.eecs.qmul.ac.uk/~josh/"> Joshua D. Reiss</a>
+    </p>
+    <p style="margin-top: 0;">
+      Centre for Digital Music, Queen Mary University of London
+    </p>
+
+    <h5 class="" style="color: black;" role="group" aria-label="Top menu">
+      <a class="" target="blank_" href="https://arxiv.org/abs/2010.04237">arXiv</a> &#183;
+      <a class="" target="blank_" href="https://github.com/csteinmetz1/ronn">GitHub</a> &#183;
+      <a class="" target="blank_"
+        href="https://colab.research.google.com/github/csteinmetz1/ronn/blob/master/ronn.ipynb">Colab</a>
+    </h5>
+  </div>
+
+  <div class="container mt-4 " style="max-width: 950px; margin-left: auto; margin-right: auto;">
+    <div class="container">
+      <div class="section">
+        <h5 class="text-center">Abstract</h5>
+        <hr>
+        <p class="pr-5 pl-5">
+          Applications of deep learning for audio effects often focus either on emulating analog effects or learning to
+          control effects to achieve certain aesthetic goals.
+          However, deep learning approaches also have the potential to augment creativity in audio engineering through
+          neural audio effects that enable new sound transformations.
+          While recent work demonstrated that neural networks with random weights produced compelling audio effects,
+          control over these networks is limited and unintuitive.
+          To address this, we introduce a method for the steerable discovery of neural audio effects that enables a
+          level of perceptual control over the output.
+        </p>
+
+      </div>
+
+      <h2>Demo</h2>
+      <hr>
+
+      <div class=" embed-responsive embed-responsive-16by9">
+        <iframe width="560" height="315" src="https://youtube.com" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+
+      <div class="section">
+        <h2>Examples</h2>
+        <hr>
+
+        <h3>Reverb</h3>
+        <table class="text-center table table-responsive">
+          <tr>
+            <th>Description</th>
+            <th>Audio</th>
+            <th>c0</th>
+            <th>c1</th>
+          </tr>
+          <tr>
+            <td>Clean vocal</td>
+            <td>
+              <audio controls>
+                <source src="audio/reverb_v2/fvox.wav" type="audio/wav">
+              </audio>
+            </td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Default reverb</td>
+            <td>
+              <audio controls>
+                <source src="audio/reverb_v2/fvox_0_0.mp3" type="audio/wav">
+              </audio>
+            </td>
+            <td>0.0</td>
+            <td>0.0</td>
+          </tr>
+          <tr>
+            <td>Shorter reverb</td>
+            <td>
+              <audio controls>
+                <source src="audio/reverb_v2/fvox_-2_1.mp3" type="audio/wav">
+              </audio>
+            </td>
+            <td>-2.0</td>
+            <td>1.0</td>
+          </tr>
+          <tr>
+            <td>Longer reverb</td>
+            <td>
+              <audio controls>
+                <source src="audio/reverb_v2/fvox_-1_5_long.mp3" type="audio/wav">
+              </audio>
+            </td>
+            <td>-1.0</td>
+            <td>5.0</td>
+          </tr>
+          <tr>
+            <td>Distortion reverb</td>
+            <td>
+              <audio controls>
+                <source src="audio/reverb_v2/fvox_-7_10_distortion.mp3" type="audio/wav">
+              </audio>
+            </td>
+            <td>-7.0</td>
+            <td>10.0</td>
+          </tr>
+        </table>
+
+
+
+        <h3>Compressor</h3>
+
+      </div>
+
+      <div class="section">
+        <h2>Paper</h2>
+        <hr>
+        <div>
+          <div class="list-group">
+            <a href="#" class="list-group-item">
+              <img src="img/paper_thumbnail_sm.jpg" style="width:100%; margin-right:-20px; margin-top:-10px;">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Bibtex</h2>
+        <hr>
+        <div style="background-color: #e9ecef;">
+          <pre>
+                <code>
+  @inproceedings{steinmetz2021steerable,
+    title={Steerable discovery of neural audio effects},
+    author={Steinmetz, Christian J. and Reiss, Joshua D.},
+    booktitle={},
+    year={2021}}</code>
+          </pre>
+        </div>
+      </div>
+
+      <hr>
+      <footer>
+        <p>*Submitted to the NeurIPS 2021 Workshop on Machine Learning for Creativity and Design
+          <br> Send feedback and questions to <a href="http://christiansteinmetz.com">Christian Steinmetz</a>.
+        </p>
+
+        <div class="row m-3">
+          <img class="m-3 text-center" src="assets/logos/qm.png" height="60px">
+          <img class="m-3 text-center" src="assets/logos/aim.png" height="60px">
+          <img class="m-3 text-center" src="assets/logos/ukri.png" height="60px">
+          <p>This work is supported by the EPSRC UKRI Centre for Doctoral Training in Artificial Intelligence and Music
+            (EP/S022694/1).</p>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="https://cdn.rawgit.com/pcooksey/bibtex-js/5ccf967/src/bibtex_js.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
