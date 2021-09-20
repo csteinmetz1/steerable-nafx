@@ -15,6 +15,15 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+  <style>
+    td {
+      height: 80px;
+      width: 160px;
+      text-align: center;
+      vertical-align: middle;
+    }
+  </style>
+
 </head>
 
 <body>
@@ -35,11 +44,15 @@
       <a class="" target="blank_"
         href="https://colab.research.google.com/github/csteinmetz1/ronn/blob/master/ronn.ipynb">Colab</a>
     </h5>
+    <div>
+      <img class="img-fluid" src='assets/steerable-headline.svg'>
+    </div>
   </div>
 
   <div class="container mt-4 " style="max-width: 950px; margin-left: auto; margin-right: auto;">
     <div class="container">
       <div class="section">
+
         <h5 class="text-center">Abstract</h5>
         <hr>
         <p class="pr-5 pl-5">
@@ -55,6 +68,8 @@
 
       </div>
 
+
+      <!-- 
       <h2>Demo</h2>
       <hr>
 
@@ -63,76 +78,230 @@
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen></iframe>
       </div>
+      -->
 
-      <div class="section">
-        <h2>Examples</h2>
-        <hr>
+      <div class="section ">
+        <div class="row text-center justify-content-center">
+          <div class="col-auto">
 
-        <h3>Reverb</h3>
-        <table class="text-center table table-responsive">
-          <tr>
-            <th>Description</th>
-            <th>Audio</th>
-            <th>c0</th>
-            <th>c1</th>
-          </tr>
-          <tr>
-            <td>Clean vocal</td>
-            <td>
-              <audio controls>
-                <source src="audio/reverb_v2/fvox.wav" type="audio/wav">
-              </audio>
-            </td>
-            <td>-</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td>Default reverb</td>
-            <td>
-              <audio controls>
-                <source src="audio/reverb_v2/fvox_0_0.mp3" type="audio/wav">
-              </audio>
-            </td>
-            <td>0.0</td>
-            <td>0.0</td>
-          </tr>
-          <tr>
-            <td>Shorter reverb</td>
-            <td>
-              <audio controls>
-                <source src="audio/reverb_v2/fvox_-2_1.mp3" type="audio/wav">
-              </audio>
-            </td>
-            <td>-2.0</td>
-            <td>1.0</td>
-          </tr>
-          <tr>
-            <td>Longer reverb</td>
-            <td>
-              <audio controls>
-                <source src="audio/reverb_v2/fvox_-1_5_long.mp3" type="audio/wav">
-              </audio>
-            </td>
-            <td>-1.0</td>
-            <td>5.0</td>
-          </tr>
-          <tr>
-            <td>Distortion reverb</td>
-            <td>
-              <audio controls>
-                <source src="audio/reverb_v2/fvox_-7_10_distortion.mp3" type="audio/wav">
-              </audio>
-            </td>
-            <td>-7.0</td>
-            <td>10.0</td>
-          </tr>
-        </table>
+            <hr>
+            <h2>Reverb</h2>
+            <img src="audio/reverb/reverb_t60_1.0.svg">
+            <table class="text-center table table-responsive">
+              <tr>
+                <th>Description</th>
+                <th>Audio</th>
+                <th>c0</th>
+                <th>c1</th>
+              </tr>
+              <tr>
+                <td colspan="4">
+                  <h5>Vocal</h5>
+                </td>
+              </tr>
+              <tr>
+                <td>Clean vocal</td>
+                <td>
+                  <audio controls>
+                    <source src="audio/reverb/fvox.wav" type="audio/wav">
+                  </audio>
+                </td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>Default reverb</td>
+                <td>
+                  <audio controls>
+                    <source src="audio/reverb/fvox_0_0.mp3" type="audio/wav">
+                  </audio>
+                </td>
+                <td>0.0</td>
+                <td>0.0</td>
+              </tr>
+              <tr>
+                <td>Shorter reverb</td>
+                <td>
+                  <audio controls>
+                    <source src="audio/reverb/fvox_-2_1.mp3" type="audio/wav">
+                  </audio>
+                </td>
+                <td>-2.0</td>
+                <td>1.0</td>
+              </tr>
+              <tr>
+                <td>Longer reverb</td>
+                <td>
+                  <audio controls>
+                    <source src="audio/reverb/fvox_-1_5_long.mp3" type="audio/wav">
+                  </audio>
+                </td>
+                <td>-1.0</td>
+                <td>5.0</td>
+              </tr>
+              <tr>
+                <td>Distortion reverb</td>
+                <td>
+                  <audio controls>
+                    <source src="audio/reverb/fvox_-7_10_distortion.mp3" type="audio/wav">
+                  </audio>
+                </td>
+                <td>-7.0</td>
+                <td>10.0</td>
+              </tr>
+              <tr>
+                <td colspan="4">
+                  <h5>Electric Guitar</h5>
+                </td>
+              </tr>
+              <tr>
+                <td>Clean electric guitar</td>
+                <td>
+                  <audio controls>
+                    <source src="audio/compressor/egtr.mp3" type="audio/wav">
+                  </audio>
+                </td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>Small room</td>
+                <td>
+                  <audio controls>
+                    <source src="audio/reverb/egtr_small_room.mp3" type="audio/wav">
+                  </audio>
+                </td>
+                <td>-7.0</td>
+                <td>10.0</td>
+              </tr>
+              <tr>
+                <td>Large room</td>
+                <td>
+                  <audio controls>
+                    <source src="audio/reverb/egtr_large_room.mp3" type="audio/wav">
+                  </audio>
+                </td>
+                <td>-7.0</td>
+                <td>10.0</td>
+              </tr>
+              <tr>
+                <td>Distortion reverb</td>
+                <td>
+                  <audio controls>
+                    <source src="audio/reverb/egtr_dist_verb.mp3" type="audio/wav">
+                  </audio>
+                </td>
+                <td>-7.0</td>
+                <td>10.0</td>
+              </tr>
+            </table>
 
+            <h2>Compressor</h2>
+            <img src="audio/compressor/compressor_lufs_grid.svg">
+            <table class="text-center table table-responsive">
+              <tr>
+                <th>Description</th>
+                <th>Audio</th>
+                <th>c0</th>
+                <th>c1</th>
+              </tr>
+              <tr>
+                <td colspan="4">
+                  <h5>Drum kit</h5>
+                </td>
+              </tr>
+              <tr>
+                <td>Clean drum kit</td>
+                <td>
+                  <audio controls>
+                    <source src="audio/compressor/drum_fill.mp3" type="audio/wav">
+                  </audio>
+                </td>
+                <td>-</td>
+                <td>-</td>
+              <tr>
+              <tr>
+                <td>Default compression</td>
+                <td>
+                  <audio controls>
+                    <source src="audio/compressor/drum_fill_0.0.mp3" type="audio/wav">
+                  </audio>
+                </td>
+                <td>0.0</td>
+                <td>0.0</td>
+              </tr>
+              <tr>
+                <td>Less compression</td>
+                <td>
+                  <audio controls>
+                    <source src="audio/compressor/drum_fill_-1_-1.mp3" type="audio/wav">
+                  </audio>
+                </td>
+                <td>-1.0</td>
+                <td>-1.0</td>
+              </tr>
+              <tr>
+                <td>Bassy compression</td>
+                <td>
+                  <audio controls>
+                    <source src="audio/compressor/drum_fill_0.2_-1.mp3" type="audio/wav">
+                  </audio>
+                </td>
+                <td>0.2</td>
+                <td>-1.0</td>
+              </tr>
+              <tr>
+                <td>Floppy distortion</td>
+                <td>
+                  <audio controls>
+                    <source src="audio/compressor/drum_fill_0.5_0.mp3" type="audio/wav">
+                  </audio>
+                </td>
+                <td>0.5</td>
+                <td>0.0</td>
+              </tr>
+              <tr>
+                <td colspan="4">
+                  <h5>Electric Guitar</h5>
+                </td>
+              </tr>
+              <tr>
+                <td>Clean electric guitar</td>
+                <td>
+                  <audio controls>
+                    <source src="audio/compressor/egtr.mp3" type="audio/wav">
+                  </audio>
+                </td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>Default compression</td>
+                <td>
+                  <audio controls>
+                    <source src="audio/compressor/egtr_0_0.mp3" type="audio/wav">
+                  </audio>
+                </td>
+                <td>0.0</td>
+                <td>0.0</td>
+              </tr>
+              <tr>
+                <td>More compression </td>
+                <td>
+                  <audio controls>
+                    <source src="audio/compressor/egtr_0_0+9dB.mp3" type="audio/wav">
+                  </audio>
+                </td>
+                <td>0.0</td>
+                <td>0.0</td>
+              </tr>
 
+            </table>
 
-        <h3>Compressor</h3>
-
+          </div>
+        </div>
       </div>
+
 
       <div class="section">
         <h2>Paper</h2>
@@ -167,12 +336,15 @@
           <br> Send feedback and questions to <a href="http://christiansteinmetz.com">Christian Steinmetz</a>.
         </p>
 
-        <div class="row m-3">
-          <img class="m-3 text-center" src="assets/logos/qm.png" height="60px">
-          <img class="m-3 text-center" src="assets/logos/aim.png" height="60px">
-          <img class="m-3 text-center" src="assets/logos/ukri.png" height="60px">
-          <p>This work is supported by the EPSRC UKRI Centre for Doctoral Training in Artificial Intelligence and Music
-            (EP/S022694/1).</p>
+        <div class="container">
+          <div class="row m-3 justify-content-center">
+            <img class="m-3 text-center" src="assets/logos/qm.png" height="60px">
+            <img class="m-3 text-center" src="assets/logos/aim.png" height="60px">
+            <img class="m-3 text-center" src="assets/logos/ukri.png" height="60px">
+            <p>Supported by the EPSRC UKRI Centre for Doctoral Training in Artificial Intelligence and
+              Music
+              (EP/S022694/1).</p>
+          </div>
         </div>
       </footer>
     </div>
