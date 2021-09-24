@@ -16,7 +16,7 @@
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
   <style>
-    td {
+    td th {
       height: 80px;
       width: 160px;
       text-align: center;
@@ -40,11 +40,11 @@
 
     <h5 class="" style="color: black;" role="group" aria-label="Top menu">
       <a class="" target="blank_" href="https://arxiv.org/abs/2010.04237">arXiv</a> &#183;
-      <a class="" target="blank_" href="https://github.com/csteinmetz1/ronn">GitHub</a> &#183;
+      <a class="" target="blank_" href="https://github.com/csteinmetz1/steerable-nafx">GitHub</a> &#183;
       <a class="" target="blank_"
-        href="https://colab.research.google.com/github/csteinmetz1/ronn/blob/master/ronn.ipynb">Colab</a>
+        href="https://colab.research.google.com/github/csteinmetz1/steerable-nafx/blob/master/steerable-nafx.ipynb">Colab</a>
     </h5>
-    <div>
+    <div class="mt-3">
       <img class="img-fluid" src='assets/steerable-headline.svg'>
     </div>
   </div>
@@ -56,14 +56,16 @@
         <h5 class="text-center">Abstract</h5>
         <hr>
         <p class="pr-5 pl-5">
-          Applications of deep learning for audio effects often focus either on emulating analog effects or learning to
-          control effects to achieve certain aesthetic goals.
-          However, deep learning approaches also have the potential to augment creativity in audio engineering through
-          neural audio effects that enable new sound transformations.
-          While recent work demonstrated that neural networks with random weights produced compelling audio effects,
-          control over these networks is limited and unintuitive.
-          To address this, we introduce a method for the steerable discovery of neural audio effects that enables a
-          level of perceptual control over the output.
+          Applications of deep learning for audio effects often focus on emulating analog effects or learning to control
+          effects as a trained audio engineer would.
+          However, deep learning approaches also have the potential to expand creativity through neural audio effects
+          that enable new sound transformations.
+          While recent work demonstrated that neural networks with random weights produce compelling audio effects,
+          control of these effects is limited and unintuitive.
+          To address this, we introduce a method for the steerable discovery of neural audio effects.
+          This method enables the design of effects using example recordings provided by the user.
+          We demonstrate how this method produces an effect similar to the target effect, but with interesting
+          inaccuracies, and additionally provides perceptually relevant controls.
         </p>
 
       </div>
@@ -86,11 +88,10 @@
 
             <hr>
             <h2>Reverb</h2>
-            <img src="audio/reverb/reverb_t60_1.0.svg">
             <table class="text-center table table-responsive">
               <tr>
                 <th>Description</th>
-                <th>Audio</th>
+                <th></th>
                 <th>c0</th>
                 <th>c1</th>
               </tr>
@@ -103,7 +104,7 @@
                 <td>Clean vocal</td>
                 <td>
                   <audio controls>
-                    <source src="audio/reverb/fvox.wav" type="audio/wav">
+                    <source src="audio/reverb/fvox_clean.mp3" type="audio/mp3">
                   </audio>
                 </td>
                 <td>-</td>
@@ -113,44 +114,44 @@
                 <td>Default reverb</td>
                 <td>
                   <audio controls>
-                    <source src="audio/reverb/fvox_0_0.mp3" type="audio/wav">
+                    <source src="audio/reverb/fvox_0_0_-24dB.mp3" type="audio/mp3">
                   </audio>
                 </td>
-                <td>0.0</td>
-                <td>0.0</td>
+                <td>0</td>
+                <td>0</td>
               </tr>
               <tr>
                 <td>Shorter reverb</td>
                 <td>
                   <audio controls>
-                    <source src="audio/reverb/fvox_-2_1.mp3" type="audio/wav">
+                    <source src="audio/reverb/fvox_-2_1_-24dB.mp3" type="audio/mp3">
                   </audio>
                 </td>
-                <td>-2.0</td>
-                <td>1.0</td>
+                <td>-2</td>
+                <td>1</td>
               </tr>
               <tr>
                 <td>Longer reverb</td>
                 <td>
                   <audio controls>
-                    <source src="audio/reverb/fvox_-1_5_long.mp3" type="audio/wav">
+                    <source src="audio/reverb/fvox_-1_5_-24dB.mp3" type="audio/mp3">
                   </audio>
                 </td>
-                <td>-1.0</td>
-                <td>5.0</td>
+                <td>-1</td>
+                <td>5</td>
               </tr>
               <tr>
                 <td>Distortion reverb</td>
                 <td>
                   <audio controls>
-                    <source src="audio/reverb/fvox_-7_10_distortion.mp3" type="audio/wav">
+                    <source src="audio/reverb/fvox_-7_10_0dB.mp3" type="audio/mp3">
                   </audio>
                 </td>
-                <td>-7.0</td>
-                <td>10.0</td>
+                <td>-7</td>
+                <td>10</td>
               </tr>
               <tr>
-                <td colspan="4">
+                <td colspan="4" class="mb-0">
                   <h5>Electric Guitar</h5>
                 </td>
               </tr>
@@ -158,50 +159,39 @@
                 <td>Clean electric guitar</td>
                 <td>
                   <audio controls>
-                    <source src="audio/compressor/egtr.mp3" type="audio/wav">
+                    <source src="audio/reverb/egtr_clean.mp3" type="audio/mp3">
                   </audio>
                 </td>
                 <td>-</td>
                 <td>-</td>
-              </tr>
-              <tr>
-                <td>Small room</td>
-                <td>
-                  <audio controls>
-                    <source src="audio/reverb/egtr_small_room.mp3" type="audio/wav">
-                  </audio>
-                </td>
-                <td>-7.0</td>
-                <td>10.0</td>
               </tr>
               <tr>
                 <td>Large room</td>
                 <td>
                   <audio controls>
-                    <source src="audio/reverb/egtr_large_room.mp3" type="audio/wav">
+                    <source src="audio/reverb/egtr_-7_10_0dB.mp3" type="audio/wav">
                   </audio>
                 </td>
-                <td>-7.0</td>
-                <td>10.0</td>
+                <td>-7</td>
+                <td>10</td>
               </tr>
               <tr>
-                <td>Distortion reverb</td>
+                <td>Small room</td>
                 <td>
                   <audio controls>
-                    <source src="audio/reverb/egtr_dist_verb.mp3" type="audio/wav">
+                    <source src="audio/reverb/egtr_1_1_+24dB.mp3" type="audio/wav">
                   </audio>
                 </td>
-                <td>-7.0</td>
-                <td>10.0</td>
+                <td>1</td>
+                <td>1</td>
               </tr>
             </table>
 
-            <h2>Compressor</h2>
-            <img src="audio/compressor/compressor_lufs_grid.svg">
+            <h2 class="mt-5">Compressor</h2>
             <table class="text-center table table-responsive">
               <tr>
                 <th>Description</th>
-                <th>Audio</th>
+                <th></th>
                 <th>c0</th>
                 <th>c1</th>
               </tr>
@@ -214,7 +204,7 @@
                 <td>Clean drum kit</td>
                 <td>
                   <audio controls>
-                    <source src="audio/compressor/drum_fill.mp3" type="audio/wav">
+                    <source src="audio/compressor/drums_clean.mp3" type="audio/mp3">
                   </audio>
                 </td>
                 <td>-</td>
@@ -224,41 +214,97 @@
                 <td>Default compression</td>
                 <td>
                   <audio controls>
-                    <source src="audio/compressor/drum_fill_0.0.mp3" type="audio/wav">
+                    <source src="audio/compressor/drums_0_0_0dB.mp3" type="audio/mp3">
                   </audio>
                 </td>
-                <td>0.0</td>
-                <td>0.0</td>
-              </tr>
-              <tr>
-                <td>Less compression</td>
-                <td>
-                  <audio controls>
-                    <source src="audio/compressor/drum_fill_-1_-1.mp3" type="audio/wav">
-                  </audio>
-                </td>
-                <td>-1.0</td>
-                <td>-1.0</td>
+                <td>0</td>
+                <td>0</td>
               </tr>
               <tr>
                 <td>Bassy compression</td>
                 <td>
                   <audio controls>
-                    <source src="audio/compressor/drum_fill_0.2_-1.mp3" type="audio/wav">
+                    <source src="audio/compressor/drums_0.2_-1_+10dB.mp3" type="audio/mp3">
                   </audio>
                 </td>
                 <td>0.2</td>
-                <td>-1.0</td>
+                <td>-1</td>
               </tr>
               <tr>
-                <td>Floppy distortion</td>
+                <td>More compression</td>
                 <td>
                   <audio controls>
-                    <source src="audio/compressor/drum_fill_0.5_0.mp3" type="audio/wav">
+                    <source src="audio/compressor/drums_0_0_+10dB.mp3" type="audio/mp3">
                   </audio>
                 </td>
-                <td>0.5</td>
-                <td>0.0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+            </table>
+
+
+            <h2 class="mt-5">Analog Delay</h2>
+            <table class="text-center table table-responsive">
+              <tr>
+                <th>Description</th>
+                <th></th>
+                <th>c0</th>
+                <th>c1</th>
+              </tr>
+              <tr>
+                <td colspan="4">
+                  <h5>Gated Synth</h5>
+                </td>
+              </tr>
+              <tr>
+                <td>Clean gated synth</td>
+                <td>
+                  <audio controls>
+                    <source src="audio/delay/gated_synth_clean.mp3" type="audio/mp3">
+                  </audio>
+                </td>
+                <td>-</td>
+                <td>-</td>
+              <tr>
+              <tr>
+                <td>Default delay</td>
+                <td>
+                  <audio controls>
+                    <source src="audio/delay/gated_synth_0_0_-6dB.mp3" type="audio/mp3">
+                  </audio>
+                </td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>Gritty delay</td>
+                <td>
+                  <audio controls>
+                    <source src="audio/delay/gated_synth_-3_-3_16dB.mp3" type="audio/mp3">
+                  </audio>
+                </td>
+                <td>-3</td>
+                <td>-3</td>
+              </tr>
+              <tr>
+                <td>Metallic delay</td>
+                <td>
+                  <audio controls>
+                    <source src="audio/delay/gated_synth_10_0_-6dB.mp3" type="audio/mp3">
+                  </audio>
+                </td>
+                <td>10</td>
+                <td>0</td>
+              </tr>
+            </table>
+
+            <h2 class="mt-5">Guitar Amplifier</h2>
+            <table class="text-center table table-responsive">
+              <tr>
+                <th>Description</th>
+                <th></th>
+                <th>c0</th>
+                <th>c1</th>
               </tr>
               <tr>
                 <td colspan="4">
@@ -269,34 +315,99 @@
                 <td>Clean electric guitar</td>
                 <td>
                   <audio controls>
-                    <source src="audio/compressor/egtr.mp3" type="audio/wav">
+                    <source src="audio/amp/egtr_clean.mp3" type="audio/mp3">
                   </audio>
                 </td>
                 <td>-</td>
                 <td>-</td>
-              </tr>
               <tr>
-                <td>Default compression</td>
+              <tr>
+                <td>Amp slapback</td>
                 <td>
                   <audio controls>
-                    <source src="audio/compressor/egtr_0_0.mp3" type="audio/wav">
+                    <source src="audio/amp/egtr_0_0_+5dB.mp3" type="audio/mp3">
                   </audio>
                 </td>
-                <td>0.0</td>
-                <td>0.0</td>
+                <td>0</td>
+                <td>0</td>
               </tr>
               <tr>
-                <td>More compression </td>
+                <td>Soft fuzz slap</td>
                 <td>
                   <audio controls>
-                    <source src="audio/compressor/egtr_0_0+9dB.mp3" type="audio/wav">
+                    <source src="audio/amp/egtr_-1_1_+5dB.mp3" type="audio/mp3">
                   </audio>
                 </td>
-                <td>0.0</td>
-                <td>0.0</td>
+                <td>-1</td>
+                <td>-1</td>
               </tr>
-
+              <tr>
+                <td>Tunnel</td>
+                <td>
+                  <audio controls>
+                    <source src="audio/amp/egtr_10_-10_+5dB.mp3" type="audio/mp3">
+                  </audio>
+                </td>
+                <td>10</td>
+                <td>-10</td>
+              </tr>
             </table>
+
+            <h2 class="mt-5">Sound matching (Synth to Synth)</h2>
+            <table class="text-center table table-responsive">
+              <tr>
+                <th>Description</th>
+                <th></th>
+                <th>c0</th>
+                <th>c1</th>
+              </tr>
+              <tr>
+                <td colspan="4">
+                  <h5>Piano</h5>
+                </td>
+              </tr>
+              <tr>
+                <td>Clean piano</td>
+                <td>
+                  <audio controls>
+                    <source src="audio/synth2synth/piano_clean.mp3" type="audio/mp3">
+                  </audio>
+                </td>
+                <td>-</td>
+                <td>-</td>
+              <tr>
+              <tr>
+                <td>Long cascade</td>
+                <td>
+                  <audio controls>
+                    <source src="audio/synth2synth/piano_0_0_-6dB.mp3" type="audio/mp3">
+                  </audio>
+                </td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>Fuzzy cascade</td>
+                <td>
+                  <audio controls>
+                    <source src="audio/synth2synth/piano_-1_0_-6dB.mp3" type="audio/mp3">
+                  </audio>
+                </td>
+                <td>-1</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>Heavenly Tunnel</td>
+                <td>
+                  <audio controls>
+                    <source src="audio/synth2synth/piano_6_6_-24dB.mp3" type="audio/mp3">
+                  </audio>
+                </td>
+                <td>6</td>
+                <td>6</td>
+              </tr>
+            </table>
+
 
           </div>
         </div>
@@ -309,7 +420,7 @@
         <div>
           <div class="list-group">
             <a href="#" class="list-group-item">
-              <img src="img/paper_thumbnail_sm.jpg" style="width:100%; margin-right:-20px; margin-top:-10px;">
+              <img src="assets/paper_sm.jpg" style="width:100%; margin-right:-20px; margin-top:-10px;">
             </a>
           </div>
         </div>
