@@ -4,7 +4,7 @@
 
 [Christian J. Steinmetz](https://www.christiansteinmetz.com/)  and  [Joshua D. Reiss](http://www.eecs.qmul.ac.uk/~josh/)
 
-| [Paper]() | [Colab]() | [Demo]() | [Talk]() | [Slides]() |
+| [Paper]() | [Colab](https://colab.research.google.com/github/csteinmetz1/steerable-nafx/blob/master/steerable-nafx.ipynb) | [Demo](https://csteinmetz1.github.io/steerable-nafx) | [Talk]() | [Slides]() |
 
 <img src="docs/assets/steerable-headline.svg">
 
