@@ -17,3 +17,14 @@ While recent work demonstrated that neural networks with random weights produce 
 To address this, we introduce a method for the steerable discovery of neural audio effects.
 This method enables the design of effects using example recordings provided by the user. 
 We demonstrate how this method produces an effect similar to the target effect, along with interesting inaccuracies, while also providing perceptually relevant controls.
+
+<br>
+<br>
+
+<div align="center">
+
+<a href="https://www.youtube.com/watch?v=Zmo8kB-SfF4"> <img src="docs/assets/thumbnail_play.png" width="450px"></a>
+
+Watch the demo video.
+
+</div>
