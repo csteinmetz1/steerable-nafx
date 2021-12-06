@@ -4,7 +4,7 @@
 
 [Christian J. Steinmetz](https://www.christiansteinmetz.com/)  and  [Joshua D. Reiss](http://www.eecs.qmul.ac.uk/~josh/)
 
- [![arXiv](https://img.shields.io/badge/arXiv-2010.04237-b31b1b.svg)](docs/NeurIPS_2021__Steerable_discovery_of_neural_audio_effects.pdf)  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/csteinmetz1/steerable-nafx/blob/master/steerable-nafx.ipynb)  [![Demo](https://img.shields.io/badge/Web-Demo-blue)](https://csteinmetz1.github.io/steerable-nafx)
+ [![arXiv](https://img.shields.io/badge/arXiv-2010.04237-b31b1b.svg)](https://csteinmetz1.github.io/steerable-nafx/NeurIPS_2021__Steerable_discovery_of_neural_audio_effects.pdf)  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/csteinmetz1/steerable-nafx/blob/master/steerable-nafx.ipynb)  [![Demo](https://img.shields.io/badge/Web-Demo-blue)](https://csteinmetz1.github.io/steerable-nafx)
 
 <br>
 
