@@ -30,3 +30,5 @@ We demonstrate how this method produces an effect similar to the target effect, 
 Watch the demo video.
 
 </div>
+
+* Accepted to the [NeurIPS 2021 Workshop for Machine Learning for Creativity and Design](https://neuripscreativityworkshop.github.io/2021/)
