@@ -32,4 +32,14 @@ Watch the demo video.
 
 </div>
 
+## Citation
+If you use steerable-nafx in your work please consider citing us.
+```
+@inproceedings{steinmetz2021steerable,
+        title={Steerable discovery of neural audio effects},
+        author={Steinmetz, Christian J. and Reiss, Joshua D.},
+        booktitle={5th Workshop on Creativity and Design at NeurIPS},
+        year={2021}}
+```
+
 * Accepted to the [NeurIPS 2021 Workshop for Machine Learning for Creativity and Design](https://neuripscreativityworkshop.github.io/2021/)
